@@ -1,0 +1,206 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logo/icon.png' %}">
+
+    <!-- bootstrap grid css -->
+    <link
+            rel="stylesheet"
+            href="{% static 'css/plugins/bootstrap-grid.css' %}"
+    />
+    <!-- font awesome css -->
+    <link
+            rel="stylesheet"
+            href="{% static 'css/plugins/font-awesome.min.css' %}"
+    />
+    <!-- swiper css -->
+    <link rel="stylesheet" href="{% static 'css/plugins/swiper.min.css' %}"/>
+    <!-- itsulu css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <title>Omareem</title>
+</head>
+
+<body>
+<!-- wrapper -->
+<div class="mil-wrapper">
+    <!-- top bar -->
+    <div class="mil-top-position mil-fixed">
+        <div class="{% block navClassList %} mil-top-panel mil-top-panel-transparent mil-animated {% endblock %}">
+            <!-- mil-top-panel-transparent -->
+            <div class="container">
+                <a href="{% url 'home' %}" class="mil-logo" style="width: 140px"></a>
+                <div class="mil-navigation">
+                    <nav>
+                        <ul>
+                            <li class="mil-has-children">
+                                <a href="#">Enterprise</a>
+                                <ul>
+                                    <li><a href="{% url 'about' %}">About us</a></li>
+                                    <li><a href="{% url 'team' %}">Team</a></li>
+                                    <li><a href="{% url 'team-single' %}">Team Member</a></li>
+                                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                                    <li><a href="{% url 'prices' %}">Prices</a></li>
+                                    <li><a href="{% url 'faq' %}">FAQ</a></li>
+                                    <li><a href="{% url 'event' %}">Event</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'portfolio' %}">Case Studies</a></li>
+                            <li class="mil-has-children">
+                                <a href="#">Services</a>
+                                <ul>
+                                    <li><a href="{% url 'service1' %}">Service 1</a></li>
+                                    <li><a href="{% url 'service2' %}">Service 2</a></li>
+                                    <li><a href="{% url 'service3' %}">Service 3</a></li>
+                                    <li><a href="{% url 'service4' %}">Service 4</a></li>
+                                </ul>
+                            </li>
+                            <li class="mil-has-children">
+                                <a href="#">Solutions</a>
+                                <ul>
+                                    <li><a href="{% url 'solution1' %}">Solution 1</a></li>
+                                    <li><a href="{% url 'solution2' %}">Solution 2</a></li>
+                                    <li><a href="{% url 'solution3' %}">Solution 3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'blog' %}">Blog</a></li>
+                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                            <li class="mil-has-children">
+                                <a href="#">Other</a>
+                                <ul>
+                                    <li><a href="{% url 'coming-soon' %}">Coming Soon</a></li>
+                                    <li><a href="{% url '404' %}">404</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </nav>
+                </div>
+                <!-- mobile menu button -->
+                <div class="mil-menu-btn">
+                    <span></span>
+                </div>
+                <!-- mobile menu button end -->
+            </div>
+        </div>
+    </div>
+    <!-- top bar end -->
+    {% block content %} {% endblock %}
+</div>
+<!-- wrapper end -->
+
+<!-- footer -->
+<footer class="mil-dark-bg">
+    <img
+            src="{% static 'img/deco/map.png' %}"
+            alt="background"
+            class="mil-footer-bg"
+    />
+    <div class="container">
+        <div class="mil-footer-content mil-p-120-90">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-xl-4 mil-mb-30">
+                    <img
+                            src="{% static 'img/logo/logo-light.png' %}"
+                            alt=""
+                            class="mil-logo mil-mb-30"
+                            style="width: 140px"
+                    />
+
+                    <p class="mil-light-soft mil-mb-30">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                        diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                        aliquam erat volutpat.
+                    </p>
+
+                    <a href="#." class="mil-app-btn mil-mb-5">
+                        <i class="fab fa-google-play"></i>
+                        <div class="mil-app-text">
+                            <span class="mil-accent mil-text-sm">Available on the</span>
+                            <div class="mil-h6">Google Play</div>
+                        </div>
+                    </a>
+
+                    <a href="#." class="mil-app-btn">
+                        <i class="fab fa-apple"></i>
+                        <div class="mil-app-text">
+                            <span class="mil-accent mil-text-sm">Download on the</span>
+                            <div class="mil-h6">App Store</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-7 mil-mt-60-adapt">
+                    <div class="row">
+                        <div class="col-lg-7 mil-mb-30">
+                            <h3 class="mil-light mil-up-font mil-mb-30">
+                                Join The <span class="mil-accent">ITSulu</span>
+                                <br/>Experience
+                            </h3>
+                            <p class="mil-light-soft">
+                                Lorem ipsum dolor sit amet, consectetuer<br/>
+                                adipiscing elit, sed diam nonummy.
+                            </p>
+                        </div>
+                        <div class="col-lg-5 mil-mb-30">
+                            <form>
+                                <input
+                                        class="mil-rounded-input mil-text-center mil-mb-5"
+                                        type="text"
+                                        placeholder="Your email address"
+                                />
+                                <button class="mil-button mil-accent-bg mil-fw">
+                                    <span>Subscribe Now</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mil-divider mil-light"></div>
+
+        <div class="mil-footer-links">
+            <ul class="mil-social mil-light">
+                <li class="mil-adapt-links">
+                    <a href="#.">Facebook</a><a href="#.">FB</a>
+                </li>
+                <li class="mil-adapt-links">
+                    <a href="#.">Instagram</a><a href="#.">IG</a>
+                </li>
+                <li class="mil-adapt-links">
+                    <a href="#.">LinkedIn</a><a href="#.">IN</a>
+                </li>
+                <li class="mil-adapt-links">
+                    <a href="#.">Twitter</a><a href="#.">TW</a>
+                </li>
+                <li class="mil-adapt-links">
+                    <a href="#.">YouTube</a><a href="#.">YT</a>
+                </li>
+            </ul>
+            <ul class="mil-additional-links mil-light">
+                <li><a href="#.">Terms & Condition</a></li>
+                <li><a href="#.">Privacy Policy</a></li>
+                <li><a href="#.">Sitemap</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="mil-footer-bottom">
+        <div class="container">
+            <p class="mil-text-sm mil-light">© ITSulu 2023.</p>
+            <p class="mil-text-sm mil-light">All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+<!-- footer end -->
+
+<!-- jQuery js -->
+<script src="{% static 'js/plugins/jquery.min.js' %}"></script>
+<!-- swiper js -->
+<script src="{% static 'js/plugins/swiper.min.js' %}"></script>
+<!-- itsulu js -->
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
